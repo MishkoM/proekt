@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	
+</head>
+<body>
+
+<form th:action="@{/product/save}" method="post" th:object="${product}">
+
+	<div>
+		<label>Name</label>
+		<input type="text" th:filed="*{Name}" />
+	</div>
+	<div>
+		<label>Price</label>
+		<input type="text" th:filed="*{Price}" />
+	</div>
+	<div>
+		<label>Category</label>
+		<input type="text" th:filed="*{Category}" />
+	</div>
+	<div>
+		<label>Status</label>
+		<input type="text" th:filed="*{Status}" />
+	</div>
+	<div>
+		<label>unitInStocks</label>
+		<input type="password" th:filed="*{unitInStocks}" />
+	</div>
+	
+	<button type="submit" class="btn btn-default" id="btn_submit">Add New Product</button>
+	
+</form>
+
+</body>
